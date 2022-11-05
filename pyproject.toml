@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "nbtag"
+version = "0.0.1"
+description = "Set Jupyter notebook cell tags from a special comment"
+authors = ["Venky Iyer <indigoviolet@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/indigoviolet/nbtag"
+keywords = [
+    "reproducible",
+    "science",
+    "environments",
+    "scholarship",
+    "notebook",
+]
+classifiers = [
+            'Intended Audience :: Developers',
+            'Intended Audience :: Science/Research',
+            ]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+nbformat = "^5.7.0"
+
+[tool.poetry.dev-dependencies]
+snoop = "^0.4.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
