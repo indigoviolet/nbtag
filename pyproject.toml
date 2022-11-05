@@ -1,8 +1,11 @@
-[tool.poetry]
+[project]
 name = "nbtag"
 version = "0.0.1"
 description = "Set Jupyter notebook cell tags from a special comment"
-authors = ["Venky Iyer <indigoviolet@gmail.com>"]
+authors = [
+        {name = "Venky Iyer", email = "indigoviolet@gmail.com"}
+        ]
+requires-python = ">=3.9"
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/indigoviolet/nbtag"
@@ -17,14 +20,17 @@ classifiers = [
             'Intended Audience :: Developers',
             'Intended Audience :: Science/Research',
             ]
+dependencies = ["nbformat"]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-nbformat = "^5.7.0"
+[tool.hatch.envs.default]
+path = ".venv"
 
-[tool.poetry.dev-dependencies]
-snoop = "^0.4.2"
+[tool.hatch.build]
+packages = ["src/nbtag"]
+
+[tool.hatch.build.force-include]
+"jupyter-config/jupyter_server_config.d/nbtag.json" = "etc/jupyter/jupyter_server_config.d/nbtag.json"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

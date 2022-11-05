@@ -2,8 +2,8 @@
 * TODO
 
 
+
 * Resources
 
-c.FileContentsManager.pre_save_hook = TagPreSaveHook(
-    c.FileContentsManager.pre_save_hook, normalize=True
-)
+https://jupyter-server.readthedocs.io/en/latest/developers/extensions.html
+https://jupyter-server.readthedocs.io/en/latest/developers/savehooks.html
