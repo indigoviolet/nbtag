@@ -1,7 +1,8 @@
 
 * TODO
 
-
+- [ ] Add screenshot of tags in web interface to README
+- [ ] Make TagPreSaveHook parameters configurable?
 
 * Resources
 
