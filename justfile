@@ -2,13 +2,14 @@ default:
     just --list
 
 build:
-    poetry build
+    hatch build
 
 update_version_patch:
-    poetry version patch
+    hatch version patch
 
 publish:
-    poetry publish
+    hatch publish \
+       --user __token__ -a $PYPI_UPLOAD_TOKEN
 
 pipx_install:
     pipx install --force dist/conda_pip_minimal-$(poetry version | perl -lane 'print $F[1]')*.whl
