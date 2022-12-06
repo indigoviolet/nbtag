@@ -8,7 +8,6 @@ authors = [
 requires-python = ">=3.9"
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/indigoviolet/nbtag"
 keywords = [
     "reproducible",
     "science",
@@ -21,6 +20,9 @@ classifiers = [
             'Intended Audience :: Science/Research',
             ]
 dependencies = ["nbformat"]
+
+[project.urls]
+Homepage = "https://github.com/indigoviolet/nbtag"
 
 [tool.hatch.envs.default]
 path = ".venv"
