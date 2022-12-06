@@ -1,12 +1,12 @@
 [project]
 name = "nbtag"
-version = "0.0.1"
 description = "Set Jupyter notebook cell tags from a special comment"
 authors = [
         {name = "Venky Iyer", email = "indigoviolet@gmail.com"}
         ]
 requires-python = ">=3.9"
 license = "MIT"
+dynamic = ["version"]
 readme = "README.md"
 keywords = [
     "reproducible",
@@ -23,6 +23,9 @@ dependencies = ["nbformat"]
 
 [project.urls]
 Homepage = "https://github.com/indigoviolet/nbtag"
+
+[tool.hatch.version]
+path = "src/nbtag/__about__.py"
 
 [tool.hatch.envs.default]
 path = ".venv"
